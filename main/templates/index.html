@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Guantanamo Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="author" content="Skyteam">
+<meta name="description" content="this site give you all that you need" >
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #092038;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #db2824 /*#f4511e*/;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #092038;
+      z-index: 9999;
+      border: 0;
+      font-size: 15px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      /*background-color: #fff !important;*/
+      border-bottom: 2px solid white;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+      .btn_sky{
+          border : 2px solid #092038;
+          border-radius: 8px;
+          color:#092038;
+          background-color: transparent;
+          padding: 15px;
+          font-size: 18px;
+          
+      } 
+      .btn_sky:hover{
+          background-color: #f4511e;
+          color:white;
+          border-color: aliceblue;
+      }
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Guanta Familly</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a dir="rtl" lang="ar" href="#about">حول مجموعتنا</a></li>
+        <li><a dir="rtl" lang="ar"  href="#services">خدمات</a></li>
+        <li><a dir="rtl" lang="ar" href="#pricing"> مساعدة</a></li>
+        <li><a dir="rtl" lang="ar" href="#contact">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <center>
+    <img src="https://i.imgur.com/u0T3qDF.jpg" class="img-circle" style="height:15%;width: 15%;">
+        </center>
+  <h1 dir="rtl" lang="ar">مرحبا بكم في <span dir="rtl" lang="ar" style="color:#f4511e;">موقع غوانتانامو</span></h1> 
+  <!--<h1 dir="rtl" lang="ar" style="color:#f4511e;"></h1> -->
+    <br>
+    <center>
+  <form action="/subscribe/" method="post">{%csrf_token%}
+    <div class="input-group" style="width:70%;">
+      <input type="email" class="form-control" name="email" size="50" placeholder="Email Address" required >
+      <div class="input-group-btn">
+        <button dir="rtl" lang="ar" type="submit" class="btn btn-danger" dir="rtl" lang="ar" stlye="padding-left:5px;padding-right:5px;">تسجيل</button>
+      </div>
+    </div>
+  </form>
+        </center>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="text-right" dir="rtl" lang="ar" style="text-decoration: underline;color:#092038">حول مجموعتنا</h1><br>
+        <div class="embed-responsive embed-responsive-16by9">
+    <!--<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XNR3IIaSo-0"></iframe>-->
+            <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/XNR3IIaSo-0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+        <center>
+      <br><a dir="rtl" lang="ar" href="#contact" class="btn_sky slideanim">تواصل معنا</a>
+            </center>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+    <h1 dir="rtl" lang="ar" style="color:#f4511e;margin-bottom: 10px;" class="text-center">قيم مجموعتنا</h1>
+    
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      
+      <h4 dir="rtl" lang="ar"><strong>مهمة مجموعتنا:</strong></h4><br>
+      <p dir="rtl" lang="ar">اذا كان هناك شخص في حالة صعبة في حاجة للمساعدة فمجموعة غوانتا هنا لاجل تقديم يد العون ، هذفنا مساعدة الضعفاء الغير مسموعة اصواتهم، نحن لسنا بمجموعة ربحية انما مجموعة انسانية عائلة صغيرة تحب الخير للغير</p>
+        <center>
+            <a dir="rtl" lang="ar" href="#pricing" class="btn_sky">ساعدنا</a>
+        </center>
+    </div>
+      
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2 dir="rtl" lang="ar" style="text-decoration: underline;color:#092038;">خدمات مجموعتنا</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h2 dir="rtl" lang="ar" style="color:#092038;">نصنع الامل</h2>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h2 dir="rtl" lang="ar" style="color:#092038;">نحب الخير لغيرنا</h2>
+        <br>
+        <br>
+        <center>
+    <blockquote class="blockquote-reverse">
+    <h3 dir="rtl" lang="ar">اذا لم يكن هناك امل نحن نصنعه</h3>
+    <footer dir="rtl" lang="ar">شعار مجموعة غوانتا</footer>
+  </blockquote>
+        </center>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h2 dir="rtl" lang="ar" style="color:#092038;">نعمل بجد</h2>
+    </div>
+  </div>
+    <br>
+    
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2 dir="rtl" lang="ar">فروع مجموعة غوانتا</h2><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://i.imgur.com/iw5TRYL.jpg" alt="Paris" style="height:200px;width:100%;">
+        <p><strong>Ouejda</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://i.imgur.com/FFBaE7v.jpg" alt="New York"  style="height:200px;width:100%;">
+        <p><strong>Fes</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://i.imgur.com/hzYurW1.jpg" alt="San Francisco"  style="height:200px;width:100%;">
+        <p><strong>Rabat</strong></p>
+      </div>
+    </div>
+      <center>
+      <a dir="rtl" lang="ar" href="/respos/" class="btn_sky">باقي المناطق</a>
+         </center>
+  </div><br>
+  
+  <h2 dir="rtl" lang="ar">تتبع انشطة غوانتا</h2>
+  <div id="myCarousel" class="carousel w3-animate-top text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+          <a dir="rtl" lang="ar" href="#" class="btn_sky ">Facebook</a>
+      </div>
+      <div class="item">
+          <a dir="rtl" lang="ar" href="#" class="btn_sky ">Instagram</a>
+      </div>
+      <div class="item">
+          <a dir="rtl" lang="ar" href="#" class="btn_sky ">Youtube</a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2 dir="rtl" lang="ar" style="text-decoration:underline;">ساعد مجموعة غوانتا من اجل الاستمرار</h2>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-6">
+        <center>
+        <div>
+        <span class="fa fa-paypal logo" ></span>
+            <br>
+            <br>
+            <br>
+        <h2 dir="rtl" lang="ar">ارسل لنا عبر بايبال</h2>
+            <br>
+            <br>
+        <a dir="rtl" lang="ar" href="#" class="btn_sky "> Send </a>
+            </div>
+            </center>
+      </div> 
+      <div class="col-sm-6">
+        <center>
+        <div>
+        <span class="fa fa-credit-card logo" ></span>
+            <br>
+            <br>
+            <br>
+        <h2 dir="rtl" lang="ar">ارسل لنا عبر الايداع البنكي</h2>
+            <br>
+            <br>
+        <a dir="rtl" lang="ar" href="/banque/" class="btn_sky "> Send </a>
+            </div>
+            </center>
+      </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-right">تواصل معنا</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <h2 dir="rtl" lang="ar" class="text-center">لديك مشكل اتصل بنا الان</h2>
+        <br>
+        <br>
+        <center>
+        <a dir="rtl" lang="ar" href="/respos/" class="btn_sky" style="width:60%;">اعضائنا </a>
+            </center>
+    </div>
+    <div class="col-sm-7 slideanim">
+        <form action="/send/" method="post">{%csrf_token%}
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="message" placeholder="message" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+            </form>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105884.88504661838!2d-6.927303613084635!3d33.96934138316177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b871f50c5c1%3A0x7ac946ed7408076b!2sRabat!5e0!3m2!1sfr!2sma!4v1523139373907"  frameborder="0" style="border:0;height:100%;width:100%;" allowfullscreen></iframe></div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+    <h2>All rights reserver to Guanta Familly</h2>
+  <h3>Website Made By <a style="color:#db2824;" href="http://skyteam.herokuapp.com/" title="Visit Skyteam">@Skyteam</a></h3>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a,.btn_sky, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
