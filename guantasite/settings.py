@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'h7c1-r)91+^la04z&&^!xpb$srvf6+
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['https://guanta.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['guanta.herokuapp.com','127.0.0.1']
 
 
 # Application definition
